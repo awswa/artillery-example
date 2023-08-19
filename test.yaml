@@ -1,6 +1,6 @@
 ---
 config:
-  target: http://asciiart.artillery.io:8080
+  target: https://1ki2qimgd8.execute-api.us-east-1.amazonaws.com/dev/
   phases:
     - duration: 60
       arrivalRate: 1
@@ -14,3 +14,9 @@ config:
       arrivalRate: 10
       rampTo: 30
       name: Spike phase
+scenarios:
+  - name: sustainable api gateway
+    flow:
+      -loop:
+        - get:
+            url: "/lambda"

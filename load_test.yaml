@@ -1,0 +1,13 @@
+---
+config:
+  target: https://1ki2qimgd8.execute-api.us-east-1.amazonaws.com/dev/
+  phases:
+    - duration: 30
+      arrivalRate: 10
+      name: CodeGuru Profiler test
+scenarios:
+  - name: sustainable api gateway
+    flow:
+      -loop:
+        - get:
+            url: "/lambda"

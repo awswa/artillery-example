@@ -1,22 +1,11 @@
 ---
 config:
-  target: https://1ki2qimgd8.execute-api.us-east-1.amazonaws.com/dev/
+  target: https://v2dlil9im2.execute-api.us-east-1.amazonaws.com/dev/
   phases:
-    - duration: 60
-      arrivalRate: 1
-      rampTo: 5
-      name: Warm up phase
-    - duration: 60
-      arrivalRate: 5
-      rampTo: 10
-      name: Ramp up load
-    - duration: 30
-      arrivalRate: 10
-      rampTo: 30
-      name: Spike phase
+    - duration: 120
+      arrivalRate: 20
+      name: Sustained peak load
 scenarios:
-  - name: sustainable api gateway
-    flow:
-      -loop:
-        - get:
-            url: "/lambda"
+  - flow:
+      - get:
+          url: "/lambda"

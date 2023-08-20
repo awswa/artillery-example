@@ -2,7 +2,7 @@ config:
   target: {Replace this with your URL}
   phases:
     - duration: 600
-      arrivalRate: 10
+      arrivalRate: 5
       name: CodeGuru Profiler test
 scenarios:
     - flow:

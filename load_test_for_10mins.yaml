@@ -1,5 +1,5 @@
 config:
-  target: https://v2dlil9im2.execute-api.us-east-1.amazonaws.com/dev/
+  target: {Replace this with your URL}
   phases:
     - duration: 600
       arrivalRate: 10
@@ -7,4 +7,4 @@ config:
 scenarios:
     - flow:
         - get:
-            url: "/lambda"
+            url: "/lambda?rank={{ $randomNumber(1, 100) }}"

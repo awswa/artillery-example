@@ -1,6 +1,6 @@
 ---
 config:
-  target: {Replace this with your URL}
+  target: 'Replace this with your URL'
   phases:
     - duration: 120
       arrivalRate: 20

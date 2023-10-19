@@ -8,4 +8,4 @@ config:
 scenarios:
   - flow:
       - get:
-          url: "/lambda?rank={{ $randomNumber(1, 100) }}"
+          url: "/lambda?rank={{ $randomNumber(1, 570) }}"
